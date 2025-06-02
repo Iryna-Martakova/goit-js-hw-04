@@ -1,10 +1,13 @@
 function calcAverageCalories(days) {
-    let averageCal = 0;
-    let totalCal = 0;
-    for (const caloPerDay of days) {
-        totalCal += caloPerDay.calories;
-    }
-    return averageCal = totalCal / 7;
+  if (days.length === 0) {
+    return 0;
+  }
+  let averageCal = 0;
+  let totalCal = 0;
+  for (const caloPerDay of days) {
+      totalCal += caloPerDay.calories;
+  }
+  return averageCal = totalCal / days.length;
 }
 
 console.log(
